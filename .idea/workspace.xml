@@ -2,45 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e33eb1a-6c9f-41f7-93af-0facd50319f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/todo/src/redux/todoApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/src/components/TodoItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/src/components/TodoList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/src/components/TotalCompleteItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/src/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/todo/src/toggler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/todo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/components/AddTodoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/components/AddTodoForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/components/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/components/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/components/TotalCompleteItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/components/TotalCompleteItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/src/redux/todoSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/redux/todoSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/components/AddTodoForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/components/TodoItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/components/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/components/TotalCompleteItems.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/src/components/AddTodoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/components/AddTodoForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/src/redux/todoApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo/src/redux/todoApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668085485023</updated>
-      <workItem from="1668085486690" duration="12469000" />
+      <workItem from="1668085486690" duration="19015000" />
     </task>
     <servers />
   </component>

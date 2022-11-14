@@ -1,26 +1,66 @@
-# React redux todo app
+# React RTK & RTK_Query ToDo app
 
 
-## Running code
+## Запуск сервера
 
-Clone the repo and run the following:
+- cd api
+- npm install
+- npm start
+
+## Запуск прокта
 
 - cd todo
 - npm install
 - npm start
 
-**NOTE:** The API must be running in order for the finished code to work as intended. Seee "Running the API" below
+**NOTE:** Для корректной работы приложения должен быть запущен сервер (см. предыдущий раздел)
 
-## Running the API
+Данный проект демонстрирует 2 варианта работы с Redux Toolkit и Redux Toolkit Query.
 
-The API is a dead basic node.js/express server. Clone the repo and run the following:
+## Особенности 
+В данном проекте одновременно реализовано 2 способа обращения к API - с помощью Redux Toolkit и Redux Toolkit Query.
+В файле **todo/src/toggler.js** находится константа, которая переключает способ.
 
-- cd api
-- npm install
-- npm start
-- check its running by going to browser/postman
+## Redux Toolkit 
+На сегодня является классическим способом работы с реакт (создание отдельных actions и reducers - уже легаси).
+В папке с компонентом страницы (либо другого крупного блока) создаётся файл nameSlice (пример - todo/src/redux/todoSlice.js), в котором вызывается функция createSlice, в которой задаётся  initial state, описываются редьюсеры, а экшены RTK создаёт автоматически. Данная функция возвращает редьюсер и экшены.
 
-```
-localhost:7000/todos
+Несколько редьюсеров из разных файлов nameSlice объединяются в 1 с помощью функции combineReducers.
 
-```
+Для вызова API используется функция createAsyncThunk, внутри которой описывается вызов API, обработка и модификация данных. Для записи полученных данных в стейт необходимо подключить функцию createAsyncThunk в слайсе в раздел extraReducers и описать как нужно мутировать стейт.
+
+## Redux Toolkit Query
+Является самым современным способом взаимодействия с API (пример - todo/src/redux/todoApi.js).
+
+Обычно для работы необходимо создать один файл nameApi (один API файл на всё приложение позволяет редаксу эффективнее использовать преимущества автоматического refetching), однако существует возможность разделить на несеолько файлов (см. injectEndpoints). В данном файле с помощью функции createApi описываются необходимые эндпоинты.
+
+
+RTKQ service генерирует "slice reducer" который необходимо добавить Redux root reducer, и кастомный middleware который также необходимо добавить в Redux store.
+
+
+Функция createApi возвращает хук для каждого эндпоинта. 
+Подобный хук содержит всебе всю необходимую информацию о данном эндпоинте, 
+в т.ч. data, isLoading, isSuccess, isError, error. Кроме того RTKQ самостоятельно 
+кэширует данные запросов (настраивается с помощью providesTags/invalidatesTags), позволяя оптимизировать запросы на бэк.
+Вместо использования useSelector в компоненте нужно просто вызвать хук, который вернёт закэшированные данные, либо при необходимости сделает новый запрос.
+
+
+
+## Предложение по использованию
+
+Таким образом, наиболее эффективным, на мой взгляд, выглядит разделение функционала:
+* для взаимодействия с API необходимо использовать Redux Toolkit Query - это позволяет убрать огромное количество шаблонного кода, кэшировать данные.
+* для хранения данных в сторе - использовать Redux Toolkit, который сильно упрощает работу с редаксом, хотя бы благодаря immer (делает стейт псевдо-мутабельным), а также позволяет писать более понятный и компактный код.
+
+
+При дальнейшем, более глубоком изучении документации, возможно появятся другие предложения по оптимизации))
+
+
+## Полезные ссылки:
+* ***!!! https://redux.js.org/tutorials/essentials/part-7-rtk-query-basics***
+* https://reactdev.ru/libs/redux-toolkit/#_1
+* https://redux-toolkit.js.org/tutorials/rtk-query
+* https://redux-toolkit.js.org/rtk-query/usage/code-splitting
+* https://redux-toolkit.js.org/rtk-query/usage/automated-refetching
+* https://stackoverflow.com/questions/68995149/how-to-put-rtk-query-into-store-slice
+

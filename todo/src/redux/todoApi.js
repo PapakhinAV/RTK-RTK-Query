@@ -45,19 +45,3 @@ export const todoApi = createApi({
     })
 
 export const { useGetTodoQuery ,useAddTodoMutation, useToggleCompleteMutation, useDeleteTodoMutation } = todoApi
-
-
-
-//
-// export const deleteTodoApi = createApi(
-//     'todos/deleteTodoAsync',
-//     async (payload) => {
-//         const resp = await fetch(`http://localhost:4567/todos/${payload.id}`, {
-//             method: 'DELETE',
-//         });
-//
-//         if (resp.ok) {
-//             return { id: payload.id };
-//         }
-//     }
-// );

@@ -7,9 +7,9 @@ import {addTodoAsync} from "../redux/todoSlice";
 
 const AddTodoForm = () => {
 	const [value, setValue] = useState('');
-	const [addTodo] = useAddTodoMutation()
+	const [addTodo, value1] = useAddTodoMutation()
 	const dispatch = useDispatch()
-
+	console.log('value', value1)
 	const onSubmit = (event) => {
 		event.preventDefault();
 
